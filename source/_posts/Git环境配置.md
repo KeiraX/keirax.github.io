@@ -2,10 +2,10 @@
 title: Git环境配置
 date: 2022-12-07 01:35:00
 tags: 
-- Git
-categories: 
-- Git 
 - 环境配置
+categories: 
+- Git
+toc: true
 ---
 
 ## 安装Git
@@ -44,3 +44,19 @@ categories:
     >>Fetching origin
     git remote prune origin
   ```
+
+## Git全局配置用户信息
+
+* 全局配置用户名和邮箱
+	```
+  git config --global user.name [username]
+  git config --global user.email [email]
+```
+
+* 查询用户信息
+
+  ```
+  git config --list
+  ```
+
+  

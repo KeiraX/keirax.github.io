@@ -1,4 +1,4 @@
-slogan: "Keep and carry on."
+slogan: "蟄睡了一世紀的下午被你驚醒~" # "Keep and carry on."
 
 show_heart: true
 
@@ -21,15 +21,15 @@ menu:
     url: about
     intro: "About me."
     # icon: "fa fa-user"
-  - title: RSS
-    url: atom.xml
-    intro: "Subscribe me."
+  #- title: RSS
+    #url: atom.xml
+    #intro: "Subscribe me."
     # icon: "fa fa-user"
 
 links:
   - title: Freemind
-    url: https://github.com/wzpan/hexo-theme-freemind
-    intro: "Freemind's Github repository."
+    url: http://blackshow.me/
+    intro: "Freemind's Blog"
     icon: "fa fa-github"
   # - title: Freemind
   #  url: https://github.com/wzpan/hexo-theme-freemind
