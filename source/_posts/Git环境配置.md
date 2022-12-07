@@ -36,7 +36,7 @@ toc: true
 
 - 来源：[TortoiseGit save user authentication / credentials - Stack Overflow](https://stackoverflow.com/questions/14000173/tortoisegit-save-user-authentication-credentials)
 - 配置步骤：To use: Right click → TortoiseGit → Settings → Git → Credential. Select Credential helper: wincred - this repository only / wincred - current Windows user
-- ![](https://www.dropbox.com/s/r5voc36yfxpwdb3/Git%E8%AE%BE%E7%BD%AE%E6%B0%B8%E4%B9%85%E8%AE%B0%E4%BD%8F%E5%AF%86%E7%A0%81.png?dl=1)
+- ![](Git环境配置/Git设置永久记住密码.png)
 
 - 拉取远程仓库，更新远程分支
 	```
@@ -51,12 +51,14 @@ toc: true
 	```
   git config --global user.name [username]
   git config --global user.email [email]
+  ```
 ```
 
 * 查询用户信息
 
-  ```
+```
   git config --list
   ```
 
   
+  ```
