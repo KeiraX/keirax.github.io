@@ -52,13 +52,11 @@ toc: true
   git config --global user.name [username]
   git config --global user.email [email]
   ```
-```
 
 * 查询用户信息
 
-```
+  ```
   git config --list
   ```
 
   
-  ```
