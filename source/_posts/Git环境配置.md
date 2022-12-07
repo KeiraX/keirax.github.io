@@ -1,7 +1,11 @@
 ---
 title: Git环境配置
 date: 2022-12-07 01:35:00
-tags:
+tags: 
+- Git
+categories: 
+- Git 
+- 环境配置
 ---
 
 ## 安装Git
