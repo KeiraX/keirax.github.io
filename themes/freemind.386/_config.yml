@@ -66,12 +66,12 @@ duoshuo_shortname:
 
 
 # Analytics (change to yours)
-google_analytics:
-  enable: false
-  siteid: #UA-70812759-1
-baidu_tongji:
-  enable: false
-  siteid: #cb5448498d7169c668b07c2b255d62c1
+# google_analytics:
+#   enable: false
+#   siteid: #UA-70812759-1
+# baidu_tongji:
+#   enable: false
+#   siteid: #cb5448498d7169c668b07c2b255d62c1
 
 # search
 #swiftype_key: ZP2ZSuHgipSZfRyU8uTR
