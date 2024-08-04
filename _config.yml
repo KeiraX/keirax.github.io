@@ -10,10 +10,6 @@ keywords:
 author: Claudia_
 language: en # zh-CN
 timezone: 'Asia/Shanghai'
-footer:
-  beian:
-    enable: true
-    icp: 闽ICP备20003936号 #链接到工信部https://beian.miit.gov.cn/
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
