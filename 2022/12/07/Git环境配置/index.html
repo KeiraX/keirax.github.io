@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="安装Git Git下载地址 TortoiseGit下载地址  重置Git账号密码 来源：git提交代码权限问题报错记录 报错信息  123git.exe push --progress &quot;origin&quot; master:masterremote: HTTP Basic: Access deniedfatal: Authentication failed for &amp;#x27;htt">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git环境配置">
+<meta property="og:url" content="https://keirax.github.io/2022/12/07/Git%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/index.html">
+<meta property="og:site_name" content="31號星球の漫遊地">
+<meta property="og:description" content="安装Git Git下载地址 TortoiseGit下载地址  重置Git账号密码 来源：git提交代码权限问题报错记录 报错信息  123git.exe push --progress &quot;origin&quot; master:masterremote: HTTP Basic: Access deniedfatal: Authentication failed for &amp;#x27;htt">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://keirax.github.io/2022/12/07/Git%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/Git%E8%AE%BE%E7%BD%AE%E6%B0%B8%E4%B9%85%E8%AE%B0%E4%BD%8F%E5%AF%86%E7%A0%81.png">
+<meta property="article:published_time" content="2022-12-06T17:35:00.000Z">
+<meta property="article:modified_time" content="2024-06-03T14:04:04.282Z">
+<meta property="article:author" content="Claudia_">
+<meta property="article:tag" content="环境配置">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://keirax.github.io/2022/12/07/Git%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/Git%E8%AE%BE%E7%BD%AE%E6%B0%B8%E4%B9%85%E8%AE%B0%E4%BD%8F%E5%AF%86%E7%A0%81.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Git环境配置</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Articles</a></li><!--
+     --><!--
+       --><li><a href="/search/">Search</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://memos.claudia.wang/">Memos</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post" href="/2022/12/07/%E6%8D%A2%E6%9C%BA%E6%B8%85%E5%8D%95/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/2022/12/07/read/2022%E8%A7%82%E5%BD%B1%E6%B8%85%E5%8D%95/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://keirax.github.io/2022/12/07/Git%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://keirax.github.io/2022/12/07/Git%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/&text=Git环境配置"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://keirax.github.io/2022/12/07/Git%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/&title=Git环境配置"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://keirax.github.io/2022/12/07/Git%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/&is_video=false&description=Git环境配置"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Git环境配置&body=Check out this article: https://keirax.github.io/2022/12/07/Git%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://keirax.github.io/2022/12/07/Git%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/&title=Git环境配置"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://keirax.github.io/2022/12/07/Git%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/&title=Git环境配置"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://keirax.github.io/2022/12/07/Git%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/&title=Git环境配置"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://keirax.github.io/2022/12/07/Git%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/&title=Git环境配置"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://keirax.github.io/2022/12/07/Git%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/&name=Git环境配置&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://keirax.github.io/2022/12/07/Git%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/&t=Git环境配置"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Git"><span class="toc-number">1.</span> <span class="toc-text">安装Git</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E7%BD%AEGit%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81"><span class="toc-number">2.</span> <span class="toc-text">重置Git账号密码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git%E8%AE%BE%E7%BD%AE%E6%B0%B8%E4%B9%85%E8%AE%B0%E4%BD%8F%E5%AF%86%E7%A0%81"><span class="toc-number">3.</span> <span class="toc-text">Git设置永久记住密码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF"><span class="toc-number">4.</span> <span class="toc-text">Git全局配置用户信息</span></a></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        Git环境配置
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">Claudia_</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2022-12-06T17:35:00.000Z" class="dt-published" itemprop="datePublished">2022-12-07</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fa-solid fa-archive"></i>
+        <a class="category-link" href="/categories/Git/">Git</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" rel="tag">环境配置</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://git-scm.com/downloads">Git下载地址</a></li>
+<li><a target="_blank" rel="noopener" href="https://tortoisegit.org/download/">TortoiseGit下载地址</a></li>
+</ul>
+<h2 id="重置Git账号密码"><a href="#重置Git账号密码" class="headerlink" title="重置Git账号密码"></a>重置Git账号密码</h2><ul>
+<li>来源：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_33326449/article/details/91363694">git提交代码权限问题报错记录</a></li>
+<li>报错信息  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git.exe push --progress &quot;origin&quot; master:master</span><br><span class="line">remote: HTTP Basic: Access denied</span><br><span class="line">fatal: Authentication failed for &#x27;http://gitlab.xxxxxxx.com/huangyufeng/zcm-cmdb.git/&#x27;</span><br></pre></td></tr></table></figure></li>
+<li>问题分析<ul>
+<li>用户没有赋权</li>
+<li>用户密码更改</li>
+<li>Tfs账号问题</li>
+</ul>
+</li>
+<li>解决方案<ul>
+<li>在<strong>管理员模式</strong>的GitBash.exe中执行命令<br>  <code>git config --system --unset credential.helper</code></li>
+<li>永久保存密码<br>  <code>git config --global credential.helper store</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="Git设置永久记住密码"><a href="#Git设置永久记住密码" class="headerlink" title="Git设置永久记住密码"></a>Git设置永久记住密码</h2><ul>
+<li><p>来源：<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/14000173/tortoisegit-save-user-authentication-credentials">TortoiseGit save user authentication &#x2F; credentials - Stack Overflow</a></p>
+</li>
+<li><p>配置步骤：To use: Right click → TortoiseGit → Settings → Git → Credential. Select Credential helper: wincred - this repository only &#x2F; wincred - current Windows user</p>
+</li>
+<li><p><img src="/2022/12/07/Git%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/Git%E8%AE%BE%E7%BD%AE%E6%B0%B8%E4%B9%85%E8%AE%B0%E4%BD%8F%E5%AF%86%E7%A0%81.png"></p>
+</li>
+<li><p>拉取远程仓库，更新远程分支</p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git remote update origin --prune</span><br><span class="line">&gt;&gt;Fetching origin</span><br><span class="line">git remote prune origin</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="Git全局配置用户信息"><a href="#Git全局配置用户信息" class="headerlink" title="Git全局配置用户信息"></a>Git全局配置用户信息</h2><ul>
+<li><p>全局配置用户名和邮箱</p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name [username]</span><br><span class="line">git config --global user.email [email]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查询用户信息</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/about/">About</a></li>
+        
+          <li><a href="/archives/">Articles</a></li>
+        
+          <li><a href="/search/">Search</a></li>
+        
+          <li><a target="_blank" rel="noopener" href="https://memos.claudia.wang/">Memos</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Git"><span class="toc-number">1.</span> <span class="toc-text">安装Git</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E7%BD%AEGit%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81"><span class="toc-number">2.</span> <span class="toc-text">重置Git账号密码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git%E8%AE%BE%E7%BD%AE%E6%B0%B8%E4%B9%85%E8%AE%B0%E4%BD%8F%E5%AF%86%E7%A0%81"><span class="toc-number">3.</span> <span class="toc-text">Git设置永久记住密码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF"><span class="toc-number">4.</span> <span class="toc-text">Git全局配置用户信息</span></a></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://keirax.github.io/2022/12/07/Git%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://keirax.github.io/2022/12/07/Git%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/&text=Git环境配置"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://keirax.github.io/2022/12/07/Git%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/&title=Git环境配置"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://keirax.github.io/2022/12/07/Git%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/&is_video=false&description=Git环境配置"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Git环境配置&body=Check out this article: https://keirax.github.io/2022/12/07/Git%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://keirax.github.io/2022/12/07/Git%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/&title=Git环境配置"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://keirax.github.io/2022/12/07/Git%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/&title=Git环境配置"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://keirax.github.io/2022/12/07/Git%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/&title=Git环境配置"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://keirax.github.io/2022/12/07/Git%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/&title=Git环境配置"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://keirax.github.io/2022/12/07/Git%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/&name=Git环境配置&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://keirax.github.io/2022/12/07/Git%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/&t=Git环境配置"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2024
+    Claudia_
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Articles</a></li><!--
+     --><!--
+       --><li><a href="/search/">Search</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://memos.claudia.wang/">Memos</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>
